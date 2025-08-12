@@ -113,7 +113,7 @@ app.post('/audio-features-multiple', async (req, res) => {
     const audioFeatures = await spotifyApi.getAudioFeaturesForTracks(trackIds);
     res.json(audioFeatures.body.audio_features);
   } catch (error) {
-    console.error('Erreur lors de la récupération des audio features:', error);
+    console.error('Erreur lors de la récupération des audio features::', error);
     res.status(400).json({ error: 'Erreur lors de la récupération des audio features' });
   }
 });
